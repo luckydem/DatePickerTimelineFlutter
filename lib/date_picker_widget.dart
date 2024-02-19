@@ -60,6 +60,8 @@ class DatePicker extends StatefulWidget {
   /// Locale for the calendar default: en_us
   final String locale;
 
+  final String monthFormat, dayFormat, dateFormat;
+
   DatePicker(
     this.startDate, {
     Key? key,
@@ -78,6 +80,9 @@ class DatePicker extends StatefulWidget {
     this.daysCount = 500,
     this.onDateChange,
     this.locale = "en_US",
+    this.monthFormat = "MMM",
+    this.dayFormat = 'd',
+    this.dateFormat = 'E'
   }) : assert(
             activeDates == null || inactiveDates == null,
             "Can't "
@@ -202,6 +207,9 @@ class _DatePickerState extends State<DatePicker> {
                 _currentDate = selectedDate;
               });
             },
+            monthFormat: widget.monthFormat,
+            dayFormat: widget.dayFormat,
+            dateFormat: widget.dateFormat,
           );
         },
       ),

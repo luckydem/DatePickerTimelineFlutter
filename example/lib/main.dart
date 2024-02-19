@@ -81,6 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       _selectedValue = date;
                     });
                   },
+                  monthFormat: 'MMM yyyy',
                 ),
               ),
             ],
